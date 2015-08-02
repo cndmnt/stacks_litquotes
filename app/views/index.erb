@@ -1,0 +1,28 @@
+
+<h1 style="text-align: center;">Quote Database</h1>
+    
+
+<h3>
+  <% @quotes.each do |qua| %>
+  "<%= qua.quote %>"
+</h3>
+
+<h5 style="text-align: right;">
+  &mdash; <%= qua.author %>
+</h5>
+
+
+  <h6>
+    TAGS: 
+    <% qua.tags.each_with_index do |t, index| %>
+      <% if index == (qua.tags.count-1) %>
+        <%= t %>
+      <% else %>
+        <%= t %>, 
+      <% end %>
+    <% end %>
+  </h6>
+
+  <% end %>
+    
+    
